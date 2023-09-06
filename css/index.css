@@ -1,0 +1,52 @@
+head {
+    font: bold;
+}
+
+body {
+    background-color: #e0e0e0;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#site-name {
+    width: 100%; float: left; text-align: left
+}
+
+#site-indicator {
+    width: 100%; float: left; position: absolute; text-align: center
+}
+
+/* Add a black background color to the top navigation */
+.navbar {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    border: inset;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 0px 8%;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #00b1cd;
+    color: white;
+}
