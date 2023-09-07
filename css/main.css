@@ -1,4 +1,4 @@
-@import url(/recources/constant.css);
+@import url(./constant.css);
 
 header {
     z-index: 998;
@@ -24,6 +24,7 @@ body {
 }
 
 #site-indicator {
+    font-size: 40px;
     color: var(--text);
     width: 100%;
     float: left;
@@ -56,6 +57,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     min-height: 40px;
+    border-radius: 15px;
 }
 
 /* Change the color of links on hover */
@@ -74,16 +76,17 @@ body {
 
 .sidenav-button {
     color: var(--text);
-    font-size: 30px; 
+    font-size: 30px;
     cursor: pointer;
 }
 
 .sidenav-button:hover fade {
     color: var(--accent);
 }
+
 /* The side navigation menu */
 .sidenav {
-    height: fit-content;
+    height: 100%;
     /* 100% Full-height */
     width: 0px;
     /* 0 width - change this with JavaScript */
@@ -99,7 +102,7 @@ body {
     /* Black*/
     padding-right: 0px !important;
     padding-left: 0px !important;
-	text-overflow : hidden;
+    text-overflow: hidden;
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -108,7 +111,7 @@ body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
     color: var(--text);
     display: block;
     transition: 0.3s;
@@ -127,17 +130,29 @@ body {
     font-size: 36px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
+main {
+    max-width: 60%;
+    padding: 0 20% 0 20%;
+    margin: 0 auto;
+    display: block;
+    display: flex; /* Change display to flex */
+    flex-direction: column; /* Stack child elements vertically */
 }
 
-.long {
-    height: 2000px;
+.section-header {
+    border-bottom: 3px solid var(--background2);
+    padding-bottom: 15px;
 }
+
+li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+footer {
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+}
+
+

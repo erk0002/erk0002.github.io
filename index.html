@@ -1,48 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta charset="UTF-8" />
-    <title>Tristan | Home</title>
-  </head>
-  <header>
-    <div class="title">
-      <h1 id="site-name">Tristan's Website</h1>
-      <h1 id="site-indicator">HOME</h1>
-    </div>
-  </header>
-  <body>
-    <div class="navbar">
-      <a class="active" href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="faq.html">FAQ</a>
-      <a href="blog.html">Blog</a>
-    </div>
-    <span class="sidenav-button" onclick="toggleNav()"
-      ><fade>&#9776; Useful Links</fade></span
-    >
-    <div id="mySidenav" class="sidenav">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
-    <script>
-      /* Set the width of the side navigation to 250px */
-      var open = false;
-      function toggleNav() {
-        if (open) {
-          document.getElementById("mySidenav").style.width = "0";
-          open = false;
-        } else {
-          document.getElementById("mySidenav").style.width = "250px";
-          open = true;
-        }
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8" />
+  <!-- <meta name="description" content="The personal profile website created for and by Tristan MVE."> -->
+  <title>Tristan | Home</title>
+  <style>
+    @import url(css/constant.css);
+  </style>
+</head>
+<header>
+  <div class="title">
+    <h1 id="site-name">Tristan's Website</h1>
+    <h2 id="site-indicator">HOME</h1>
+  </div>
+</header>
+
+<body>
+  <nav class="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  <div class="aside-div">
+    <span class="sidenav-button" onclick="toggleNav()">
+      <fade>&#9776; Useful Links</fade>
+    </span>
+    <aside id="mySidenav" class="sidenav">
+      <a href="https://shorturl.at/hxGUW" target="_blank">HZ course and Examination Regulations 2022-2023</a>
+      <a href="https://shorturl.at/fhiwF" target="_blank">Implementation Regulations (IR) of the HBO-ICT</a>
+      <a href="https://shorturl.at/gkCES" target="_blank">Learn Environment</a>
+      <a href="https://shorturl.at/bHM37" target="_blank">HBO-ICT Teams</a>
+      <a href="https://portal.hz.nl/en" target="_blank">MyHz</a>
+      <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ-HBO-ICT</a>
+    </aside>
+  </div>
+  <script>
+    /* Set the width of the side navigation to 250px */
+    var open = false;
+    function toggleNav() {
+      if (open) {
+        document.getElementById("mySidenav").style.width = "0";
+        open = false;
+      } else {
+        document.getElementById("mySidenav").style.width = "250px";
+        open = true;
       }
-    </script>
-    <div class="long"></div>
-  </body>
+    }
+  </script>
+  <main class="home">
+    <h3 style="text-align: center; font-size: 40px;">Welcome to my website!</h3>
+    <div>
+      <h4 class="section-header">Why HBO-ICT?</h4>
+      <p style="margin-top: -5px; width: 55%; float: left;">
+        Ever since I was a small boy, I've always asked questions about how things work. Anything from why the
+        trees only have leaves when its warm, to why the moon has it's phases. As you can probably already tell,
+        even a young age, the sciences already piqed my interests. Over time I begun to realize that the things
+        I tend to find the most satisfaction in are things with well defined, systematic structures. Once I
+        began to delve further into math and programming in my studdies, an entire world of possibilities and
+        endless achievements opened up to me.<br>
+        <br>
+        My hopse is that, by furhter studying these fields, I will be introduced to even more opportunities to
+        explore the vast world of mathematics, computing, and development. Not to mention, I also have a particular
+        intrerest in cybersecurity, another field I hope to further familiarize myself with in the future.
+      </p>
+      <img src="recources/baby_photo.png" alt="baby photo" id="baby-photo"
+        style="zoom: 55%; float: right; border-radius: 30px; position: relative;">
+    </div>
+    <div>
+      <h4 class="section-header">What are some of my learning objectives? </h4>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29kZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+          alt="laptop" style="zoom: 40%; float: left; border-radius: 30px; position: relative;">
+      </div>
+      <div style="margin-top: -20px; padding-left: 15px; width: 50%; float: right;">
+        <p>Throughout the course of my current studdies, these are some of the things I hope to achieve or acquire:</p>
+        <ul>
+          <li>Improved time <b>management skills</b></li>
+          <li>Improved task <b>organization methods</b></li>
+          <li>Minimizing the impact of my <b>perfectionism</b> on unimportant/irrelavent tasks</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+<footer>
+</footer>
+
 </html>
