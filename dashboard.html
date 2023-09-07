@@ -2,17 +2,18 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="UTF-8" />
     <title>Tristan | Dashboard</title>
   </head>
-
-  <body>
+  <header>
     <div class="title">
       <h1 id="site-name">Tristan's Website</h1>
       <h1 id="site-indicator">DASHBOARD</h1>
     </div>
+  </header>
+  <body>
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="profile.html">Profile</a>
@@ -20,5 +21,28 @@
       <a href="faq.html">FAQ</a>
       <a href="blog.html">Blog</a>
     </div>
+    <span class="sidenav-button" onclick="toggleNav()"
+      ><fade>&#9776; Useful Links</fade></span
+    >
+    <div id="mySidenav" class="sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    <script>
+      /* Set the width of the side navigation to 250px */
+      var open = false;
+      function toggleNav() {
+        if (open) {
+          document.getElementById("mySidenav").style.width = "0";
+          open = false;
+        } else {
+          document.getElementById("mySidenav").style.width = "250px";
+          open = true;
+        }
+      }
+    </script>
+    <div class="long"></div>
   </body>
 </html>
