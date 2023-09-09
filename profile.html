@@ -28,34 +28,82 @@
     <a href="blog.html">Blog</a>
   </nav>
   <div class="aside-div">
-    <span class="sidenav-button" onclick="toggleNav()">
+    <span class="sidenav-button" id="sidenav-button" onclick="toggleNav()">
       <fade>&#9776; Useful Links</fade>
     </span>
-    <aside id="mySidenav" class="sidenav">
-      <a href="https://shorturl.at/hxGUW" target="_blank">HZ course and Examination Regulations 2022-2023</a>
-      <a href="https://shorturl.at/fhiwF" target="_blank">Implementation Regulations (IR) of the HBO-ICT</a>
-      <a href="https://shorturl.at/gkCES" target="_blank">Learn Environment</a>
-      <a href="https://shorturl.at/bHM37" target="_blank">HBO-ICT Teams</a>
-      <a href="https://portal.hz.nl/en" target="_blank">MyHz</a>
-      <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ-HBO-ICT</a>
-    </aside>
+    <div class="sidenav-wrapper">
+      <aside id="mySidenav" class="sidenav">
+        <a href="https://shorturl.at/hxGUW" target="_blank">HZ course and Examination Regulations 2022-2023</a>
+        <a href="https://shorturl.at/fhiwF" target="_blank">Implementation Regulations (IR) of the HBO-ICT</a>
+        <a href="https://shorturl.at/gkCES" target="_blank">Learn Environment</a>
+        <a href="https://shorturl.at/bHM37" target="_blank">HBO-ICT Teams</a>
+        <a href="https://portal.hz.nl/en" target="_blank">MyHz</a>
+        <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ-HBO-ICT</a>
+      </aside>
+    </div>
   </div>
   <script>
-    /* Set the width of the side navigation to 250px */
     var open = false;
+    var sidenavButton = document.getElementById("sidenav-button");
+
     function toggleNav() {
-      if (open) {
-        document.getElementById("mySidenav").style.width = "0";
+      if (open) { // if open, close
         open = false;
-      } else {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.left = "-250px";
+        sidenavButton.innerHTML = "&#9776; Useful Links";
+      } else { // if closed, open
         open = true;
+        document.getElementById("mySidenav").style.left = "0px";
+        sidenavButton.innerHTML = "&#10006; Useful Links";
       }
     }
   </script>
   <main class="profile">
-    <h3>Harro everynyan</h3>
+    <h3 class="page-header">Who am I?</h3>
+    <section>
+      <h4 class="section-header"> About Me</h4>
+      <p id="profile-p1">I'm Tristan Martijn van Erk, a Dutch-American born in Atlanta, Georgia where I lived most of my
+        life. My
+        background as a Dutch-American has always been a source of pride and has shaped my perspective on life. In 2022,
+        I embarked on an exciting new adventure when I moved to Belgium. There, I dedicated myself to my education,
+        completing high school while undertaking the challenging International Baccalaureate Diploma Programme (IBDP)
+        with Physics, Math AA, and Computer Science, all at the higher level. This academic journey has laid a solid
+        foundation for my future endeavours, and I look forward to continuing to explore the world and all the
+        opportunities it has to offer.</p>
+    </section>
+    <section>
+      <h4 class="section-header">My Character Traits</h4>
+      <p id="profile-p1">As an individual with perfectionism, many of both my strengths and weaknesses are greatly
+        affected by my tendency
+        to make something as perfect and/or self-satisfying as possible.
+      </p>
+      <div id="strengths-list" class="shadow">
+        <h5 class="subtext-header" id="centered-relative">Strengths</h5>
+        <ul>
+          <li>Dilligence</li>
+          <li>Commitment</li>
+          <li>Insight</li>
+        </ul>
+      </div>
+      <div id="weaknesses-list" class="shadow">
+        <h5 class="subtext-header" id="centered-relative">Weaknesses</h5>
+        <ul class="ul-right">
+          <li>Perfectionism</li>
+          <li>Distractibility</li>
+          <li>MORE+</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h4 class="section-header">My Work</h4>
+      <div id="video1-wrapper">
+        <video controls id="video1" class="video-js vjs-default-skin" src="/recources/capri-sun.mp4" type='video/mp4'>
+        </video>
+      </div>
+    </section>
   </main>
 </body>
+<footer>
+</footer>
 
 </html>

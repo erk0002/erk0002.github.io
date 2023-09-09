@@ -1,4 +1,4 @@
-@import url(./constant.css);
+@import url(constant.css);
 
 header {
     z-index: 998;
@@ -32,32 +32,37 @@ body {
     text-align: center
 }
 
+.shadow {
+    -webkit-box-shadow: 0px 0px 15px -1px #000000;
+    box-shadow: 0px 0px 15px -1px #000000;
+}
+
 /* Add a black background color to the top navigation */
 .navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    background-color: var(--background);
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
     z-index: 999;
+    background-color: var(--background);
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
-    float: center;
     color: var(--text);
     text-align: center;
-    padding: 0px 8%;
     text-decoration: none;
     font-size: 17px;
-    display: inline;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    min-height: 40px;
+    display: inline-block;
     border-radius: 15px;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    width: 14%;
+    margin: -25px 0 0 0;
 }
 
 /* Change the color of links on hover */
@@ -66,6 +71,8 @@ body {
     box-shadow: 0px 0px 15px -1px #000000;
     background-color: var(--secondary);
     color: var(--text);
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
 }
 
 /* Add a color to the active/current link */
@@ -78,6 +85,8 @@ body {
     color: var(--text);
     font-size: 30px;
     cursor: pointer;
+    text-align: center;
+    position: absolute;
 }
 
 .sidenav-button:hover fade {
@@ -88,14 +97,14 @@ body {
 .sidenav {
     height: 100%;
     /* 100% Full-height */
-    width: 0px;
+    width: 250px;
     /* 0 width - change this with JavaScript */
     position: absolute;
     /* Stay in place */
     z-index: 1;
     /* Stay on top */
-    top: 230px;
-    left: 0;
+    top: 280px;
+    left: -250px;
     /* Stay at the top */
     overflow: hidden;
     background-color: var(--background);
@@ -105,6 +114,11 @@ body {
     text-overflow: hidden;
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav-wrapper #slide {
+    transition: 0.5;
+    right: 0;
 }
 
 /* The navigation menu links */
@@ -122,26 +136,25 @@ body {
     color: var(--accent);
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 36px;
-}
-
 main {
     max-width: 60%;
     padding: 0 20% 0 20%;
     margin: 0 auto;
     display: block;
-    display: flex; /* Change display to flex */
-    flex-direction: column; /* Stack child elements vertically */
+    display: flex;
+    /* Change display to flex */
+    flex-direction: column;
+    /* Stack child elements vertically */
 }
 
 .section-header {
     border-bottom: 3px solid var(--background2);
     padding-bottom: 15px;
+}
+
+#centered-relative {
+    position: relative;
+    text-align: center;
 }
 
 li:not(:last-child) {
@@ -155,4 +168,72 @@ footer {
     padding: 20px;
 }
 
+section {
+    position: relative;
+}
 
+#home-p1 {
+    width: 50%;
+    float: left;
+    text-align: justify;
+}
+
+#home-img1 {
+    zoom: 55%;
+    float: right;
+    border-radius: 30px;
+    position: relative;
+}
+
+#home-img2 {
+    zoom: 40%;
+    float: left;
+    border-radius: 30px;
+    position: relative;
+}
+
+#home-p2-wrapper {
+    padding-left: 15px;
+    width: 50%;
+    float: right;
+}
+
+#profile-p1 {
+    width: 100%;
+    float: center;
+    text-align: justify;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 40px;
+}
+
+#strengths-list {
+    width: 50%;
+    float: left;
+    border: 3px dashed var(--background2);
+    margin: -3px -3px -3px -1%;
+}
+
+#weaknesses-list {
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin: -3px -1% -3px -3px;
+    border: 3px dashed var(--background2);
+}
+
+.ul-right {
+    direction: rtl;
+}
+
+#video1-wrapper {
+    margin: 0 10% 0 10%;
+}
+
+#video1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

@@ -28,36 +28,41 @@
     <a href="blog.html">Blog</a>
   </nav>
   <div class="aside-div">
-    <span class="sidenav-button" onclick="toggleNav()">
+    <span class="sidenav-button" id="sidenav-button" onclick="toggleNav()">
       <fade>&#9776; Useful Links</fade>
     </span>
-    <aside id="mySidenav" class="sidenav">
-      <a href="https://shorturl.at/hxGUW" target="_blank">HZ course and Examination Regulations 2022-2023</a>
-      <a href="https://shorturl.at/fhiwF" target="_blank">Implementation Regulations (IR) of the HBO-ICT</a>
-      <a href="https://shorturl.at/gkCES" target="_blank">Learn Environment</a>
-      <a href="https://shorturl.at/bHM37" target="_blank">HBO-ICT Teams</a>
-      <a href="https://portal.hz.nl/en" target="_blank">MyHz</a>
-      <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ-HBO-ICT</a>
-    </aside>
+    <div class="sidenav-wrapper">
+      <aside id="mySidenav" class="sidenav">
+        <a href="https://shorturl.at/hxGUW" target="_blank">HZ course and Examination Regulations 2022-2023</a>
+        <a href="https://shorturl.at/fhiwF" target="_blank">Implementation Regulations (IR) of the HBO-ICT</a>
+        <a href="https://shorturl.at/gkCES" target="_blank">Learn Environment</a>
+        <a href="https://shorturl.at/bHM37" target="_blank">HBO-ICT Teams</a>
+        <a href="https://portal.hz.nl/en" target="_blank">MyHz</a>
+        <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ-HBO-ICT</a>
+      </aside>
+    </div>
   </div>
   <script>
-    /* Set the width of the side navigation to 250px */
     var open = false;
+    var sidenavButton = document.getElementById("sidenav-button");
+
     function toggleNav() {
-      if (open) {
-        document.getElementById("mySidenav").style.width = "0";
+      if (open) { // if open, close
         open = false;
-      } else {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.left = "-250px";
+        sidenavButton.innerHTML = "&#9776; Useful Links";
+      } else { // if closed, open
         open = true;
+        document.getElementById("mySidenav").style.left = "0px";
+        sidenavButton.innerHTML = "&#10006; Useful Links";
       }
     }
   </script>
   <main class="home">
-    <h3 style="text-align: center; font-size: 40px;">Welcome to my website!</h3>
-    <div>
+    <h3 class="page-header">Welcome to my website!</h3>
+    <section>
       <h4 class="section-header">Why HBO-ICT?</h4>
-      <p style="width: 50%; float: left; text-align: justify;">
+      <p id="home-p1">
         Ever since I was a small boy, I've always asked questions about how things work. Anything from why the
         trees only have leaves when its warm, to why the moon has it's phases. As you can probably already tell,
         even a young age, the sciences already piqued my interests. Over time I begun to realize that the things
@@ -69,17 +74,16 @@
         explore the vast world of mathematics, computing, and development. Not to mention, I also have a particular
         intrerest in cybersecurity, another field I hope to further familiarize myself with in the future.
       </p>
-      <img src="recources/baby_photo.png" alt="baby photo" id="baby-photo"
-        style="zoom: 55%; float: right; border-radius: 30px; position: relative;">
-    </div>
-    <div>
-      <h4 class="section-header">What are some of my learning objectives? </h4>
+      <img src="recources/baby_photo.png" alt="baby photo" id="home-img1">
+    </section>
+    <section>
+      <h4 class="section-header">What are Some of my Learning Objectives? </h4>
       <div>
         <img
           src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29kZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-          alt="laptop" style="zoom: 40%; float: left; border-radius: 30px; position: relative;">
+          alt="laptop" id="home-img2">
       </div>
-      <div style="padding-left: 15px; width: 50%; float: right;">
+      <div id="home-p2-wrapper">
         <p>Throughout the course of my current studdies, these are some of the things I hope to achieve or acquire:</p>
         <ul>
           <li>Improved time <b>management skills</b></li>
@@ -87,7 +91,7 @@
           <li>Minimizing the impact of my <b>perfectionism</b> on unimportant/irrelavent tasks</li>
         </ul>
       </div>
-    </div>
+    </section>
   </main>
 </body>
 <footer>
