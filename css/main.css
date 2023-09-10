@@ -50,10 +50,8 @@ body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     z-index: 999;
     background-color: var(--background);
-    margin: 1rem;
     padding: 2rem 2rem;
     text-align: center;
-
 }
 
 /* Style the links inside the navigation bar */
@@ -327,7 +325,8 @@ section {
 .accordion a::after {
     content: "";
     background-image: url('/recources/ionicons.designerpack/chevron-down.svg');
-    background-size: cover; /* Adjust as needed */
+    background-size: cover;
+    /* Adjust as needed */
     position: absolute;
     float: right;
     right: 1rem;
@@ -339,18 +338,17 @@ section {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 1px solid var(--text);
     text-align: center;
-    transform: translateY(-9px);
+    top: 7px;
 }
 
 .accordion a.active::after {
     content: "";
     background-image: url('/recources/ionicons.designerpack/chevron-back.svg');
-    background-size: cover; /* Adjust as needed */
+    background-size: cover;
+    /* Adjust as needed */
     color: var(--secondary);
-    border: 1px solid var(--primary);
-    transform: translateY(-9px);
+    top: 7px;
 }
 
 .accordion .content {
