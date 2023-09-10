@@ -32,6 +32,11 @@ body {
     text-align: center
 }
 
+.unstyled-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
 .shadow {
     -webkit-box-shadow: 0px 0px 10px -1px #000000;
     box-shadow: 0px 0px 10px -1px #000000;
@@ -281,16 +286,9 @@ section {
 /* faq styling  */
 
 .container {
-    margin: 0 auto;
-    padding: 4rem;
-    width: 48rem;
-}
-
-h3 {
-    font-size: 1.75rem;
-    color: var(--text);
-    padding: 1.3rem;
-    margin: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .accordion a {
@@ -304,11 +302,10 @@ h3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
+    width: 93%;
     padding: 1rem 3rem 1rem 1rem;
     color: var(--text);
     font-size: 1.15rem;
-    font-weight: 400;
     border-bottom: 1px solid var(--background2);
 }
 
@@ -323,20 +320,19 @@ h3 {
 }
 
 .accordion a.active {
-    color: var(--secondary);
-    border-bottom: 1px solid var(--secondary);
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
 }
 
 .accordion a::after {
     content: "";
     background-image: url('/recources/ionicons.designerpack/chevron-down.svg');
     background-size: cover; /* Adjust as needed */
-    background-position-y: -1px;
     position: absolute;
     float: right;
     right: 1rem;
     font-size: 1rem;
-    color: var(--text);
+    color: var(--primary);
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -345,15 +341,16 @@ h3 {
     border-radius: 50%;
     border: 1px solid var(--text);
     text-align: center;
+    transform: translateY(-9px);
 }
 
 .accordion a.active::after {
     content: "";
     background-image: url('/recources/ionicons.designerpack/chevron-back.svg');
     background-size: cover; /* Adjust as needed */
-    background-position-y: -1px;
     color: var(--secondary);
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--primary);
+    transform: translateY(-9px);
 }
 
 .accordion .content {
