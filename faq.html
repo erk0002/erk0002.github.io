@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/main.css" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="recources/ionicons.designerpack">
   <!-- <meta name="description" content="The personal profile website created for and by Tristan MVE."> -->
   <title>Tristan | FAQ</title>
   <style>
@@ -42,24 +43,46 @@
       </aside>
     </div>
   </div>
-  <script>
-    var open = false;
-    var sidenavButton = document.getElementById("sidenav-button");
-
-    function toggleNav() {
-      if (open) { // if open, close
-        open = false;
-        document.getElementById("mySidenav").style.left = "-250px";
-        sidenavButton.innerHTML = "&#9776; Useful Links";
-      } else { // if closed, open
-        open = true;
-        document.getElementById("mySidenav").style.left = "0px";
-        sidenavButton.innerHTML = "&#10006; Useful Links";
-      }
-    }
-  </script>
+  <script src='js/sidenav.js'></script>
   <main class="faq">
-    <h3>Harro everynyan</h3>
+    <h4 class="section-header">Frequently Asked Questions</h4>
+
+    <div class="container">
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <a>What can JavaScript Do?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>How JavaScript Can Modify HTML and CSS Values?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>What Is SVG?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>Is FAQ Section Matters In Website?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>How To Create a Light FAQ Element?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='js/faq.js'></script>
   </main>
 </body>
 <footer>

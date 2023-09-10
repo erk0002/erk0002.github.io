@@ -42,22 +42,7 @@
       </aside>
     </div>
   </div>
-  <script>
-    var open = false;
-    var sidenavButton = document.getElementById("sidenav-button");
-
-    function toggleNav() {
-      if (open) { // if open, close
-        open = false;
-        document.getElementById("mySidenav").style.left = "-250px";
-        sidenavButton.innerHTML = "&#9776; Useful Links";
-      } else { // if closed, open
-        open = true;
-        document.getElementById("mySidenav").style.left = "0px";
-        sidenavButton.innerHTML = "&#10006; Useful Links";
-      }
-    }
-  </script>
+  <script src='js/sidenav.js'></script>
   <main class="profile">
     <h3 class="page-header">Who am I?</h3>
     <section>
@@ -80,7 +65,7 @@
       <div id="strengths-list" class="shadow">
         <h5 class="subtext-header" id="centered-relative">Strengths</h5>
         <ul>
-          <li>Dilligence</li>
+          <li>Diligence</li>
           <li>Commitment</li>
           <li>Insight</li>
         </ul>
@@ -95,6 +80,7 @@
       </div>
     </section>
     <section>
+      <!-- add interests and skills section -->
       <h4 class="section-header">My Work</h4>
       <div id="video1-wrapper">
         <video controls id="video1" class="video-js vjs-default-skin" src="/recources/capri-sun.mp4" type='video/mp4'>
