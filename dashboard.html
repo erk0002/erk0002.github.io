@@ -12,14 +12,14 @@
     @import url(css/constant.css);
   </style>
 </head>
-<header>
-  <div class="title">
-    <h1 id="site-name">Tristan's Website</h1>
-    <h2 id="site-indicator">DASHBOARD</h1>
-  </div>
-</header>
 
 <body>
+  <header>
+    <div class="title">
+      <h1 id="site-name">Tristan's Website</h1>
+      <h2 id="site-indicator">DASHBOARD</h2>
+    </div>
+  </header>
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="profile.html">Profile</a>
@@ -52,73 +52,84 @@
             <tr>
               <th>Quartile</th>
               <th>Course</th>
+              <th>Exam</th>
               <th>Grade</th>
               <th>EC</th>
             </tr>
           </thead>
           <tbody>
             <tr class="active-row">
-              <td>1</td>
+              <td rowspan="3">1</td>
               <td>Program & Career Orientation</td>
+              <td>Assessment Website</td>
               <td>x</td>
               <td>2,5</td>
             </tr>
             <tr class="active-row">
-              <td>1</td>
               <td>Computer Science Basics</td>
+              <td>Written Knowledge Test</td>
               <td>x</td>
               <td>5</td>
             </tr>
             <tr class="active-row">
-              <td>1</td>
               <td>Programming Basics</td>
+              <td>Case Study Exam</td>
               <td>x</td>
               <td>5</td>
             </tr>
             <tr class="active-row">
               <td>2</td>
               <td>Object Orientated Programming</td>
+              <td>Presentation / Case Study Exam</td>
               <td>x</td>
               <td>10</td>
             </tr>
             <tr class="active-row">
-              <td>3</td>
+              <td rowspan="2">3</td>
               <td>Framework Development 1</td>
+              <td>Case Study Exam</td>
               <td>x</td>
               <td>5</td>
             </tr>
             <tr class="active-row">
-              <td>3</td>
               <td>Framework Project 1</td>
+              <td>Criterium Bases Interview / Assignment / Case Study Exam</td>
               <td>x</td>
               <td>7,5</td>
             </tr>
             <tr class="active-row">
               <td>4</td>
               <td>Framework Project 2</td>
+              <td>Assessment Website</td>
               <td>x</td>
               <td>10</td>
             </tr>
             <tr class="active-row">
-              <td>All</td>
+              <td rowspan="3">All</td>
               <td>Personal Professional Development</td>
+              <td>Final Delivery / Report of Acceptance Test / IT Portfolio</td>
               <td>x</td>
               <td>12,5</td>
             </tr>
             <tr class="active-row">
-              <td>All</td>
               <td>IT Personality 1</td>
+              <td rowspan="2">Portfolio</td>
               <td>x</td>
               <td>1,25</td>
             </tr>
             <tr class="active-row">
-              <td>All</td>
               <td>IT Personality 2</td>
               <td>x</td>
               <td>1,25</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="progress-element">
+        <h4 class="section-header progress-label">NBSA - 45 EC Minimum:</h4>
+        <div class="progress-container">
+          <progress value="0" max="45" >0%</progress>
+        </div>
       </div>
     </section>
   </main>

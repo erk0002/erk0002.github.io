@@ -1,12 +1,28 @@
-@import url(constant.css);
+:root {
+    --text: #011807;
+    --background: #ffffff;
+    --background2: #bbbbbb;
+    --primary: #f42fc3;
+    --secondary: #fbb1c4;
+    --accent: #a30bd5;
+}
 
-header {
-    z-index: 998;
+[data-theme="dark"] {
+    --text: #ffffff;
+    --background: #011807;
+    --background2: #051b0b;
+    --primary: #f42fc3;
+    --secondary: #130105;
+    --accent: #da80f8;
 }
 
 body {
     background-color: var(--background);
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+header {
+    z-index: 998;
 }
 
 .title {
@@ -64,8 +80,8 @@ body {
     border-radius: 15px;
     padding: 1rem 1rem;
     vertical-align: middle;
-    width: 14%;
-    margin: -25px 0 0 0;
+    width: 15%;
+    margin: -40px 0 -40px 0;
 }
 
 /* Change the color of links on hover */
@@ -268,10 +284,6 @@ section {
     border-bottom: 1px solid var(--background2);
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: var(--background);
-}
-
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid var(--secondary);
 }
@@ -279,6 +291,45 @@ section {
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: var(--text);
+}
+
+/* progress bar styling  */
+
+progress {
+    opacity: 0;
+}
+
+.progress-container {
+    position: relative;
+    display: inline-block;
+    background: var(--background2);
+    height: 20px;
+    border-radius: 6px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* change progress */
+    width: 0%; 
+    background: var(--accent);
+}
+
+.progress-label {
+    position: relative;
+}
+
+.progress-label::after {
+    /* progress label */
+    content: "0%";
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* faq styling  */
